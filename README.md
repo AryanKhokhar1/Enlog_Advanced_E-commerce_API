@@ -57,13 +57,12 @@ A comprehensive Django REST API for an e-commerce system with JWT authentication
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AryanKhokhar1/Enlog_Advanced_E-commerce_API.git
 cd Enlog-Assessment
 ```
 
 ### 2. Create Virtual Environment
 ```bash
-python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 ```
 
@@ -180,7 +179,6 @@ daphne -p 8001 enlog.asgi:application
 - `PUT /api/categories/{id}/` - Update category (Admin only)
 - `DELETE /api/categories/{id}/` - Delete category (Admin only)
 - `GET /api/categories/{id}/products/` - Get products by category
-
 - `GET /api/products/` - List products (with filtering & pagination)
 - `POST /api/products/` - Create product (Admin only)
 - `GET /api/products/{id}/` - Get product details
@@ -194,7 +192,6 @@ daphne -p 8001 enlog.asgi:application
 - `POST /api/cart/items/` - Add item to cart
 - `PUT /api/cart/items/{id}/` - Update cart item
 - `DELETE /api/cart/items/{id}/` - Remove item from cart
-
 - `GET /api/orders/` - List user's orders
 - `POST /api/orders/` - Create order from cart
 - `GET /api/orders/{id}/` - Get order details
