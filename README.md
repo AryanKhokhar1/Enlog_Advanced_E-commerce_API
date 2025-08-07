@@ -2,7 +2,7 @@
 
 A comprehensive Django REST API for an e-commerce system with JWT authentication, caching, real-time notifications, and advanced features.
 
-## 🚀 Features
+## Features
 
 ### User Management
 - JWT-based authentication using `djangorestframework-simplejwt`
@@ -35,7 +35,7 @@ A comprehensive Django REST API for an e-commerce system with JWT authentication
 - Django Channels integration
 - Redis as channel layer backend
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|------------|
@@ -46,14 +46,14 @@ A comprehensive Django REST API for an e-commerce system with JWT authentication
 | Real-time | Django Channels |
 | Admin | Django Admin |
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.8+
 - PostgreSQL
 - Redis Server
 - pip (Python package manager)
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -163,7 +163,7 @@ python manage.py runserver
 daphne -p 8001 enlog.asgi:application
 ```
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /auth/api/register/` - User registration
@@ -214,14 +214,14 @@ Example:
 GET /api/products/?category=1&price_min=10&price_max=100&in_stock=true&search=laptop&ordering=-price
 ```
 
-## 🔌 WebSocket Connections
+## WebSocket Connections
 
 Connect to WebSocket for real-time notifications:
 ```
 ws://localhost:8001/ws/notifications/{user_id}/
 ```
 
-## 🗃 Database Models
+## Database Models
 
 ### User Model (Extended)
 - Email (unique)
@@ -240,7 +240,7 @@ ws://localhost:8001/ws/notifications/{user_id}/
 - Order & OrderItem for completed orders
 - Order status tracking with choices
 
-## 🎯 Caching Strategy
+## Caching Strategy
 
 ### Cached Data
 - Product lists (1 hour TTL)
@@ -252,7 +252,7 @@ ws://localhost:8001/ws/notifications/{user_id}/
 - Automatic cache clearing on product/category updates
 - Cache keys are strategically designed for efficient invalidation
 
-## 🔧 Admin Interface
+## Admin Interface
 
 Access Django Admin at: `http://localhost:8000/admin/`
 
@@ -262,7 +262,7 @@ Access Django Admin at: `http://localhost:8000/admin/`
 - User management
 - Real-time order status updates trigger WebSocket notifications
 
-## 🧪 Testing
+## Testing
 
 ### Sample Data Creation
 Use Django Admin to create:
@@ -280,7 +280,7 @@ Recommended tools:
 Use browser developer tools or WebSocket testing tools to connect to:
 `ws://localhost:8001/ws/notifications/{user_id}/`
 
-## 🚀 Production Deployment
+## Production Deployment
 
 ### Environment Variables
 Set up these environment variables for production:
@@ -302,7 +302,7 @@ REDIS_URL=redis://redis_host:6379
 4. Set up proper Redis configuration
 5. Configure database connection pooling
 
-## 📝 API Authentication
+## API Authentication
 
 ### Registration
 ```bash
@@ -334,7 +334,7 @@ curl -X GET http://localhost:8000/auth/api/profile/ \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -342,11 +342,11 @@ curl -X GET http://localhost:8000/auth/api/profile/ \
 4. Push to the branch
 5. Create a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -380,6 +380,6 @@ This project is licensed under the MIT License.
    - Use pagination for large datasets
    - Implement API rate limiting if needed
 
-## 📞 Support
+## Support
 
 For support or questions, please create an issue in the repository.
